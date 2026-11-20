@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-fp="getnexskill-20261120-v1">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive, noai, noimageai">
+<meta name="description" content="GetNexSkill · AI 技能训练应用 · AI 智能体工作坊课程页">
+<title>GetNexSkill · AI 智能体工作坊</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="watermark">GetNexSkill · 课程班 · 仅供课堂使用</div>
+
+<!-- 课程码门 -->
+<div class="gate" id="gate">
+  <div class="gate-card">
+    <div class="brand brand-gate">
+      <span class="brand-mark">G</span>
+      <div>
+        <div class="brand-name"><span class="wm-get">GET</span><span class="wm-nex">NEX</span><span class="wm-skill">SKILL</span></div>
+        <div class="brand-tag">AI 技能训练应用</div>
+      </div>
+    </div>
+    <h1 class="gate-title">把课练成本事</h1>
+    <p class="gate-sub">输入课程码进入本次班级。课程码由讲师/助教发放。</p>
+    <form id="gate-form" class="gate-form">
+      <label for="access-code" class="sr-only">课程码</label>
+      <input id="access-code" class="input gate-input" type="text" autocomplete="off" placeholder="请输入课程码" required>
+      <button class="btn btn-primary" type="submit">进入课程</button>
+    </form>
+    <p class="gate-error" id="gate-error" role="alert"></p>
+  </div>
+</div>
+
+<!-- 主页面 -->
+<div class="app hidden" id="app">
+  <header class="nav">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="GetNexSkill 首页">
+        <span class="brand-mark">G</span>
+        <span class="brand-text">
+          <span class="brand-name"><span class="wm-get">GET</span><span class="wm-nex">NEX</span><span class="wm-skill">SKILL</span></span>
+          <span class="brand-tag">AI 技能训练应用</span>
+        </span>
+      </a>
+      <nav class="nav-links" aria-label="课程导航">
+        <a href="#agenda">议程</a>
+        <a href="#practice">练手</a>
+        <a href="#checkpoint">通关</a>
+        <a href="#retrain">复训</a>
+        <a href="#cases">案例场</a>
+        <a href="#me">我的</a>
+      </nav>
+      <div class="nav-meta">
+        <span class="pill" id="nav-course">AI 智能体工作坊</span>
+        <span class="pill pill-ghost" id="nav-date">2026-12-17</span>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="kicker" id="hero-kicker">GetNexSkill · AI 技能训练应用</p>
+          <h1 class="display">把课<br><span class="accent">练成本事</span></h1>
+          <p class="lead" id="hero-lead">把培训现场变成练兵场，把课后复训变成日常习惯。用你自己的岗位材料，做出一个能带走的 AI 作品。</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#practice">进入练手</a>
+            <a class="btn btn-ghost" href="#checkpoint">查看通关</a>
+          </div>
+          <div class="stats" id="hero-stats">
+            <div><b>8</b><span>任务卡</span></div>
+            <div><b>4</b><span>训练模式</span></div>
+            <div><b>14</b><span>天复训</span></div>
+            <div><b>1</b><span>份作品</span></div>
+          </div>
+        </div>
+        <aside class="hero-card" aria-label="今日任务">
+          <div class="hero-card-head">
+            <div>
+              <div class="card-title">今天，先练哪一步？</div>
+              <div class="card-sub">点一个任务开始，不用自己想提示词</div>
+            </div>
+            <span class="pill">练手模式</span>
+          </div>
+          <div class="caps" id="hero-caps"></div>
+          <div class="mode-row" id="hero-modes"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="agenda">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">01 · Agenda</p>
+          <h2 class="section-title">今天的节奏</h2>
+          <p class="section-desc">练手为主，讲师只做演示和点评；每个环节都有产出。</p>
+        </div>
+        <div class="agenda" id="agenda-list"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="practice">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">02 · Practice</p>
+            <h2 class="section-title">练手 · 8 张任务卡</h2>
+            <p class="section-desc">选一张卡，按步骤做，对照 ★ 验收；卡住先看兜底。</p>
+          </div>
+          <div class="progress-chip" id="practice-progress">0 / 8 完成</div>
+        </div>
+        <div class="filter-bar" id="task-filter" role="tablist" aria-label="任务筛选">
+          <button class="chip active" data-filter="all" role="tab">全部</button>
+          <button class="chip" data-filter="练手" role="tab">练手</button>
+          <button class="chip" data-filter="通关" role="tab">通关</button>
+          <button class="chip" data-filter="进阶" role="tab">进阶</button>
+        </div>
+        <div class="task-grid" id="task-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="checkpoint">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">03 · Checkpoint</p>
+          <h2 class="section-title">通关 · 把成果讲清楚</h2>
+          <p class="section-desc">5 维 rubric，总分 ≥7 通过；不通过会指到具体补练卡。课程内通关，不是官方认证。</p>
+        </div>
+        <div class="checkpoint-grid">
+          <div class="panel">
+            <h3 class="panel-title">我的通关自评</h3>
+            <div class="rubric" id="rubric"></div>
+            <div class="rubric-total" id="rubric-total">总分：0 / 10 · 待评</div>
+          </div>
+          <div class="panel">
+            <h3 class="panel-title">提交作品卡</h3>
+            <form id="work-form" class="form">
+              <label>姓名<input class="input" id="wf-name" placeholder="你的名字"></label>
+              <label>岗位<input class="input" id="wf-role" placeholder="如 HR / 销售 / 生产"></label>
+              <label>作品名<input class="input" id="wf-title" placeholder="如 入职培训通知 Skill"></label>
+              <label>一句话亮点<input class="input" id="wf-desc" placeholder="给谁用、解决了什么"></label>
+              <label>证据链接（可选）<input class="input" id="wf-link" placeholder="截图/文档链接"></label>
+              <button class="btn btn-primary" type="submit">提交作品墙（邮件）</button>
+            </form>
+          </div>
+        </div>
+        <h3 class="sub-title">作品墙</h3>
+        <div class="works-grid" id="works-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="retrain">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="section-label">04 · Retrain</p>
+            <h2 class="section-title">复训 · 14 天，把会做变成习惯</h2>
+            <p class="section-desc">每天 10–15 分钟，只练最弱一步；打卡记录在本机。</p>
+          </div>
+          <div class="progress-chip" id="retrain-streak">0 / 14 天</div>
+        </div>
+        <div class="retrain-grid" id="retrain-grid"></div>
+      </div>
+    </section>
+
+    <section class="section" id="cases">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">05 · Cases</p>
+          <h2 class="section-title">案例场 · 找灵感，不照抄</h2>
+          <p class="section-desc">行业/岗位/做法/产出/复用点；改造后再提交作品墙。</p>
+        </div>
+        <div class="case-grid" id="case-grid"></div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="me">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">06 · Me</p>
+          <h2 class="section-title">我的 · 进度与作品集</h2>
+          <p class="section-desc">数据只存在本机；可导出 JSON/Markdown 交给助教。</p>
+        </div>
+        <div class="me-grid">
+          <div class="panel">
+            <h3 class="panel-title">我的信息</h3>
+            <div class="form">
+              <label>姓名<input class="input" id="me-name" placeholder="你的名字"></label>
+              <label>岗位<input class="input" id="me-role" placeholder="如 HR / 销售 / 生产"></label>
+            </div>
+            <div class="me-stats" id="me-stats"></div>
+            <div class="hero-actions">
+              <button class="btn btn-ghost" id="export-json" type="button">导出 JSON</button>
+              <button class="btn btn-ghost" id="export-md" type="button">导出 Markdown</button>
+              <button class="btn btn-ghost" id="reset-progress" type="button">重置进度</button>
+            </div>
+          </div>
+          <div class="panel">
+            <h3 class="panel-title">我的作品集</h3>
+            <div class="portfolio" id="portfolio"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="graduate">
+      <div class="container">
+        <div class="section-head">
+          <p class="section-label">07 · After</p>
+          <h2 class="section-title">毕业后，三条路</h2>
+          <p class="section-desc">不硬销；想继续用、团队一起用、或深度定制，选一条。</p>
+        </div>
+        <div class="paths" id="paths"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div><b>ActionThinker 出品 · GetNexSkill</b> · 本页数据仅存本机，不上传、不收集个人信息</div>
+      <div><a href="mailto:lu@nexfde.com">lu@nexfde.com</a></div>
+    </div>
+  </footer>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<noscript><p style="padding:24px;font-family:sans-serif">本页需要启用 JavaScript。</p></noscript>
+
+<script src="course-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

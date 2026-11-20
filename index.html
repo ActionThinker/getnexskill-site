@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow">
+<meta name="description" content="GetNexSkill · AI 技能训练应用。把培训现场变成练兵场，把课后复训变成日常习惯。">
+<title>GetNexSkill · AI 技能训练应用</title>
+<link rel="canonical" href="https://getnexskill.com/">
+<style>
+  :root{
+    --tea-deep:#1E3D32; --tea-dark:#152D25; --tea-mid:#2A5A4A;
+    --copper:#C8853E; --copper-light:#D9A35E; --copper-pale:#FBF6ED;
+    --copper-ink:#9A6228; --warm-white:#F5F2ED; --surface:#FFFFFF;
+    --bg-alt:#EDEAE4; --border:#D4CFC6; --ink:#1A1A1A; --muted:#5C6B64;
+    --font:"Inter","PingFang SC","Microsoft YaHei","Segoe UI",sans-serif;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--warm-white);color:var(--ink);font-family:var(--font);line-height:1.7;-webkit-font-smoothing:antialiased}
+  a{color:var(--copper-ink);text-decoration:none}
+  .container{max-width:1100px;margin:0 auto;padding:0 24px}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:22px 0;border-bottom:1px solid var(--border)}
+  .brand{display:flex;align-items:center;gap:12px}
+  .mark{width:42px;height:42px;border-radius:11px;background:var(--tea-dark);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:22px;border:1px solid rgba(217,163,94,.55)}
+  .wordmark{font-size:21px;font-weight:700;letter-spacing:-.02em;line-height:1.1}
+  .wm-get{color:var(--copper-ink)} .wm-nex{color:var(--tea-deep)} .wm-skill{color:var(--copper-ink)}
+  .tag{font-size:10px;font-weight:600;letter-spacing:.13em;color:var(--muted);text-transform:uppercase}
+  .nav-links{display:flex;gap:20px;font-size:13px;color:var(--muted)}
+  .nav-links a:hover{color:var(--tea-deep)}
+  .hero{display:grid;grid-template-columns:1.08fr .92fr;gap:48px;align-items:center;padding:64px 0 56px}
+  .kicker{font-size:11px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:14px}
+  h1{font-size:54px;line-height:1.06;letter-spacing:-.03em;color:var(--tea-deep);margin:0 0 18px}
+  h1 span{color:var(--copper-ink)}
+  .lead{font-size:17px;line-height:1.85;color:var(--muted);max-width:520px;margin:0 0 26px}
+  .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+  .btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 26px;border-radius:8px;font-size:14px;font-weight:600}
+  .btn-primary{background:var(--copper-ink);color:#fff;box-shadow:0 4px 16px rgba(200,133,62,.28)}
+  .btn-ghost{border:1px solid var(--border);color:var(--tea-deep);background:var(--surface)}
+  .meta{display:flex;gap:24px;margin-top:26px;font-size:12px;color:var(--muted)}
+  .meta b{display:block;font-size:22px;color:var(--tea-deep);font-weight:700;margin-bottom:2px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:22px;box-shadow:0 2px 12px rgba(30,61,50,.04)}
+  .card-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:16px}
+  .card-title{font-size:14px;font-weight:700;color:var(--tea-deep)}
+  .pill{border:1px solid var(--border);border-radius:99px;padding:6px 12px;font-size:11px;color:var(--copper-ink);background:var(--copper-pale)}
+  .caps{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+  .cap{border:1px solid var(--border);border-radius:10px;padding:12px;font-size:12.5px;color:var(--tea-deep);background:var(--copper-pale);line-height:1.45}
+  .cap small{display:block;color:var(--copper-ink);font-size:10px;font-weight:700;letter-spacing:.08em;margin-bottom:4px}
+  .modes{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:16px}
+  .mode{border-radius:10px;padding:12px 8px;background:var(--bg-alt);font-size:12px;color:var(--tea-deep);text-align:center}
+  .mode b{display:block;font-size:13px;margin-bottom:3px}
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:8px 0 44px}
+  .strip .card{padding:20px}
+  .strip .label{font-size:10px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--copper-ink);margin-bottom:8px}
+  .strip h3{font-size:16px;margin:0 0 6px;color:var(--tea-deep)}
+  .strip p{font-size:12.5px;line-height:1.7;color:var(--muted);margin:0}
+  .footer{border-top:1px solid var(--border);padding:20px 0 30px;display:flex;justify-content:space-between;gap:12px;font-size:11px;color:var(--muted);flex-wrap:wrap}
+  .footer b{color:var(--tea-deep)}
+  @media (max-width:860px){
+    .hero{grid-template-columns:1fr;gap:30px;padding:40px 0 36px}
+    h1{font-size:40px}.lead{font-size:15px}.strip{grid-template-columns:1fr}
+    .nav-links{display:none}.modes{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:420px){
+    .container{padding:0 18px}.caps{grid-template-columns:1fr}.hero{padding-top:32px}
+    h1{font-size:34px}.meta{gap:16px}
+  }
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;width:100%">
+    <div class="brand">
+      <div class="mark">G</div>
+      <div>
+        <div class="wordmark"><span class="wm-get">GET</span><span class="wm-nex">NEX</span><span class="wm-skill">SKILL</span></div>
+        <div class="tag">AI 技能训练应用</div>
+      </div>
+    </div>
+    <nav class="nav-links">
+      <a href="#modes">训练模式</a>
+      <a href="/course/">课程入口</a>
+      <a href="mailto:lu@nexfde.com">联系</a>
+    </nav>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div>
+      <div class="kicker">GetNexSkill · AI 技能训练应用</div>
+      <h1>把课<br><span>练成本事</span></h1>
+      <p class="lead">把培训现场变成练兵场，把课后复训变成日常习惯。用你自己的岗位材料，做出一个能带走的 AI 作品。</p>
+      <div class="cta-row">
+        <a class="btn btn-primary" href="/course/">课程学员入口</a>
+        <a class="btn btn-ghost" href="mailto:lu@nexfde.com">联系我们</a>
+      </div>
+      <div class="meta">
+        <div><b>8</b>任务卡</div>
+        <div><b>4</b>训练模式</div>
+        <div><b>14</b>天复训</div>
+        <div><b>1</b>份作品</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-head">
+        <div>
+          <div class="card-title">今天，先练哪一步？</div>
+          <div style="font-size:11px;color:var(--muted)">点一个场景开始，不用自己想提示词</div>
+        </div>
+        <div class="pill">练手模式</div>
+      </div>
+      <div class="caps">
+        <div class="cap"><small>C1 · 画像</small>帮我做岗位 AI 画像</div>
+        <div class="cap"><small>C2 · 选题</small>找出我最该先做的 3 个场景</div>
+        <div class="cap"><small>C3 · 升级</small>把这个任务升级成「让结果发生」</div>
+        <div class="cap"><small>C4 · 知识库</small>建一个懂我们公司的知识库助手</div>
+        <div class="cap"><small>C5 · 智能体</small>搭一个岗位智能体</div>
+        <div class="cap"><small>C6 · 通关</small>生成我的作品卡和 1 分钟路演</div>
+      </div>
+      <div class="modes" id="modes">
+        <div class="mode"><b>练手</b>现场带练</div>
+        <div class="mode"><b>复训</b>每天 15 分钟</div>
+        <div class="mode"><b>通关</b>能力验收</div>
+        <div class="mode"><b>案例场</b>找灵感</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip">
+    <div class="card"><div class="label">Task T2</div><h3>把一个任务升级成「让结果发生」</h3><p>20 分钟 · 产出一份升级后的提示词 + 一次真实输出 + 前后对比。</p></div>
+    <div class="card"><div class="label">Task T3</div><h3>建一个懂我们公司的知识库助手</h3><p>25 分钟 · 3 份脱敏资料 + 3 个必须答对的问题 + 1 个必须拒答的问题。</p></div>
+    <div class="card"><div class="label">Task T4</div><h3>搭一个岗位智能体</h3><p>30 分钟 · 角色、输入输出、规矩、边界 + 正常/缺失/边界三例测试。</p></div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container" style="display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;width:100%">
+    <div><b>ActionThinker 出品 · GetNexSkill</b> · 把课练成本事</div>
+    <div><a href="mailto:lu@nexfde.com">lu@nexfde.com</a></div>
+  </div>
+</footer>
+</body>
+</html>
