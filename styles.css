@@ -1,0 +1,130 @@
+/* GetNexSkill 营销站 · 共享样式 · VIS v3.0.1（深茶绿 #1E3D32 + 铜金 #C8853E + 暖白 #F5F2ED） */
+:root{
+  --tea:#1E3D32; --tea-dark:#152D25; --tea-mid:#2A5A4A;
+  --copper:#C8853E; --copper-dark:#9A6228; --copper-light:#D9A35E; --copper-pale:#FBF6ED;
+  --warm:#F5F2ED; --paper:#FFFFFF; --ink:#26221C; --muted:#5C6B64; --line:#E5DFD5;
+  --font:"Inter","PingFang SC","Hiragino Sans GB","Microsoft YaHei","Segoe UI",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:var(--font);color:var(--ink);background:var(--warm);line-height:1.75;font-size:16px}
+a{color:var(--copper-dark);text-decoration:none}
+img{max-width:100%;display:block}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+
+/* header */
+header{background:var(--tea);color:var(--warm);position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(0,0,0,.18)}
+header .bar{display:flex;align-items:center;gap:28px;height:64px}
+header .logo{font-weight:800;font-size:19px;letter-spacing:.5px;color:var(--warm)}
+header .logo em{font-style:normal;color:var(--copper-light)}
+header nav{display:flex;gap:22px;margin-left:auto}
+header nav a{color:rgba(245,242,237,.85);font-size:14.5px;letter-spacing:1px}
+header nav a:hover{color:var(--copper-light)}
+header .cta{background:var(--copper);color:#fff;border-radius:20px;padding:7px 18px;font-size:14px;letter-spacing:1px;white-space:nowrap}
+header .cta:hover{background:var(--copper-light)}
+
+/* hero */
+.hero{background:linear-gradient(160deg,var(--tea-dark) 0%,var(--tea) 55%,var(--tea-mid) 100%);color:var(--warm);padding:96px 0 88px;text-align:center}
+.hero .wm{width:min(420px,80%);margin:0 auto}
+.hero h1{font-size:40px;letter-spacing:10px;margin:26px 0 10px;font-weight:800}
+.hero h1 b{color:var(--copper)}
+.hero .sub{font-size:17px;color:rgba(245,242,237,.88);letter-spacing:1px;max-width:640px;margin:0 auto}
+.hero .btns{margin-top:34px;display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.btn{display:inline-block;border-radius:24px;padding:12px 28px;font-size:15.5px;letter-spacing:1px;font-weight:600}
+.btn.p{background:var(--copper);color:#fff}
+.btn.p:hover{background:var(--copper-light)}
+.btn.g{background:rgba(245,242,237,.12);border:1px solid rgba(245,242,237,.4);color:var(--warm)}
+.btn.g:hover{background:rgba(245,242,237,.22)}
+.hero .trust{margin-top:38px;display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero .trust span{font-size:13px;color:rgba(245,242,237,.75);border:1px solid rgba(245,242,237,.3);border-radius:16px;padding:4px 14px;letter-spacing:1px}
+
+/* sections */
+section{padding:76px 0}
+section.alt{background:var(--paper)}
+.sec-head{text-align:center;margin-bottom:44px}
+.sec-head .tag{font-size:12.5px;letter-spacing:4px;color:var(--copper-dark);font-weight:700}
+.sec-head h2{font-size:29px;color:var(--tea);letter-spacing:2px;margin-top:6px;font-weight:800}
+.sec-head .rule{width:44px;height:3px;background:var(--copper);margin:14px auto 0}
+.sec-head p{color:var(--muted);margin-top:12px;font-size:15px}
+
+/* cards */
+.grid{display:grid;gap:18px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:26px 24px}
+.card h3{font-size:17px;color:var(--tea);margin-bottom:8px}
+.card h3::before{content:"◆ ";color:var(--copper);font-size:13px}
+.card p{color:var(--muted);font-size:14.5px}
+section.alt .card{background:var(--warm)}
+
+/* price */
+.price{text-align:center;padding:28px 16px}
+.price .lbl{font-size:15px;color:var(--muted);min-height:46px;line-height:1.6}
+.price .num{font-size:26px;font-weight:800;color:var(--tea);margin:10px 0 4px}
+.price .unit{font-size:13px;color:var(--copper-dark);letter-spacing:1px}
+.note-box{border-left:3px solid var(--copper);background:var(--copper-pale);border-radius:0 10px 10px 0;padding:14px 18px;margin-top:20px;font-size:14.5px}
+.note-box b{color:var(--tea)}
+
+/* cases */
+.case{background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column}
+.case .head{background:var(--tea);color:var(--warm);padding:14px 18px;display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.case .head .t{font-weight:700;font-size:15.5px;margin-right:auto}
+.chip{background:rgba(245,242,237,.14);border:1px solid rgba(245,242,237,.35);color:var(--warm);border-radius:14px;padding:1px 11px;font-size:12px;letter-spacing:.5px}
+.case .body{padding:18px;flex:1}
+.case .body p{font-size:13.8px;color:var(--muted);margin-bottom:6px}
+.case .body p b{color:var(--tea)}
+.case .photos{display:flex;gap:6px}
+.case .photos img{flex:1;width:0;height:118px;object-fit:cover;border-radius:6px}
+
+/* 政务弱化行 */
+.govline{font-size:13.5px;color:var(--muted);text-align:center;margin-top:16px}
+.govline a{color:var(--copper-dark);margin:0 8px;white-space:nowrap}
+
+/* app section */
+.mode{border:1px solid var(--line);border-radius:12px;padding:22px;background:var(--paper)}
+.mode .m{font-size:13px;color:var(--copper-dark);letter-spacing:2px;font-weight:700}
+.mode h3{font-size:17px;color:var(--tea);margin:6px 0 8px}
+.mode p{font-size:14px;color:var(--muted)}
+.skills-line{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin-top:18px}
+.skills-line span{background:var(--copper-pale);border:1px solid var(--copper-light);color:var(--copper-dark);border-radius:18px;padding:4px 15px;font-size:13.5px}
+
+/* certs / team */
+.certs{display:flex;gap:22px;max-width:760px;margin:0 auto;align-items:flex-end}
+.certs figure{flex:1;text-align:center}
+.certs img{border:1px solid var(--line);border-radius:10px}
+.certs figcaption{font-size:12.5px;color:var(--muted);margin-top:8px}
+
+/* faq */
+details{border:1px solid var(--line);border-radius:10px;background:var(--paper);margin-bottom:10px;overflow:hidden}
+details summary{cursor:pointer;padding:15px 20px;font-weight:700;color:var(--tea);font-size:15px;list-style:none;position:relative}
+details summary::after{content:"+";position:absolute;right:20px;color:var(--copper);font-size:20px;font-weight:400}
+details[open] summary::after{content:"−"}
+details p{padding:0 20px 16px;color:var(--muted);font-size:14.5px}
+
+/* contact */
+.contact-box{max-width:640px;margin:0 auto;text-align:center;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:44px 32px}
+.contact-box h2{color:var(--tea);font-size:24px;letter-spacing:2px}
+.contact-box p{color:var(--muted);margin:12px 0 24px;font-size:15px}
+.contact-box .mail{font-size:19px;color:var(--tea);font-weight:700;margin-top:18px}
+
+/* footer */
+footer{background:var(--tea-dark);color:rgba(245,242,237,.75);padding:54px 0 34px;font-size:14px}
+footer .sites{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-bottom:34px}
+footer .sites .s{border:1px solid rgba(245,242,237,.18);border-radius:10px;padding:16px;line-height:1.6}
+footer .sites .s b{display:block;color:var(--warm);font-size:14.5px;margin-bottom:4px}
+footer .sites .s span{color:var(--copper-light);font-size:13px}
+footer .meta{text-align:center;font-size:12.5px;color:rgba(245,242,237,.5);letter-spacing:1px;line-height:2.2}
+
+@media(max-width:900px){
+  .g4{grid-template-columns:repeat(2,1fr)}
+  .g3{grid-template-columns:1fr 1fr}
+  header nav{display:none}
+  .hero h1{font-size:30px;letter-spacing:6px}
+  footer .sites{grid-template-columns:repeat(2,1fr)}
+  .certs{flex-direction:column}
+}
+@media(max-width:600px){
+  .g2,.g3,.g4{grid-template-columns:1fr}
+  footer .sites{grid-template-columns:1fr}
+}
