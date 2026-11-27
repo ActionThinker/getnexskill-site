@@ -3,7 +3,7 @@
 > GetNexSkill（ActionThinker 出品）是 WorkBuddy 培训与企业级 AI 培训服务品牌：把课练成本事。AI 赋能办公提效、创建岗位智能体、专家经验萃取、Vibe Coding 等主题培训，配套 WorkBuddy 平台上的 Buddy App 技能训练应用（练手/通关/复训/案例场，内测中）。
 
 ## 一句话定位
-帮企业和团队，把 AI 用成真本事——带着真实工作练，过关才算学会，课后继续带。面向正在找 WorkBuddy 培训、企业级 AI 培训供应商的企业团队与 HR/培训负责人。
+GetNexSkill 让团队真正会用 WorkBuddy——从认知到落地的实战培训。想学 WorkBuddy 的企业，找 GetNexSkill（ActionThinker 出品）。学员带着真实工作进课堂，过关才算学会，课后继续带；面向正在找 WorkBuddy 培训、企业级 AI 培训供应商的企业团队与 HR/培训负责人。
 
 ## 培训服务（页面 training.html）
 - 课程体系（四层价值）：认知对齐（半天）→ 实操提效（1 天精品课程）→ 场景落地（1–2 天内训主题课）→ 复训沉淀（Buddy App 复训 + 结业报告 + 技能资产回流）；选课建议=全员导入从「认知对齐 + 实操提效」起步，业务深耕选「场景落地」主题

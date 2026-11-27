@@ -5,7 +5,7 @@
 ## 首页（index.html）
 
 ### 定位
-GetNexSkill 是 WorkBuddy 培训与企业级 AI 培训服务品牌（ActionThinker 出品）。不是听完就忘的讲座——学员带着真实工作进课堂，过关才算学会，课后继续带。Buddy App 已通过审核 · 内测中；多行业真实交付案例；AI Builder × FDE 专家团队主讲。
+GetNexSkill 让团队真正会用 WorkBuddy：从认知到落地的实战培训。想学 WorkBuddy 的企业，找 GetNexSkill——AI Builder × FDE 专家团队，把课练成本事。学员带着真实工作进课堂，过关才算学会，课后继续带。Buddy App 已通过审核 · 内测中；多行业真实交付案例。
 
 ### 团队正在遇到的问题
 1. 听过不少 AI 课，回岗位还是不会用——课程停留在演示层面，没有跟自己的业务发生关系。
